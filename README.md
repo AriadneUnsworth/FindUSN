@@ -16,7 +16,6 @@ To run the script `deconv_multi`:
    conda create -n caimans python=3.8
    conda activate caimans
    pip install caiman
-````
 
 2. Place the script in your `caimans` environment directory.
 3. Provide a folder containing all `.xlsx` files processed in earlier steps.
