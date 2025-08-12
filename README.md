@@ -8,8 +8,9 @@ We utilized existing repositories in various parts of the code, including:
 
 1. [Neuroscience Information Theory Toolbox](https://github.com/nmtimme/Neuroscience-Information-Theory-Toolbox)
 2. [DeepSpike](https://github.com/mackelab/DeepSpike)
+3. [CaImAn](https://github.com/flatironinstitute/CaImAn)
 
-Most MATLAB codes are provided in *.mlx* format. For original code annotated in Chinese, we also offer an English version in *.m* format under the same file name.
+Most MATLAB codes are in *.mlx* format. For original code annotated in Chinese, we also offer an English version in *.m* format under the same file name.
 
 
 

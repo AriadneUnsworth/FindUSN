@@ -1,10 +1,12 @@
-## SupportingPrograms 
-This folder contains other various programs needed to regenerate results reported in supplementary figures, that offers various statistical tests on the results
+## Supporting Programs
 
-Each folder is named by "AnalysisName_FigNo." We provide two versions of all code, one in English, one in Chinese.
+This folder contains various programs required to regenerate results reported in the supplementary figures. These scripts perform a range of statistical tests on the results.
 
-Folder FigS10_SyncAnaCheck contains code for regenerating FigS10 Assessment of synchronization normalization method by simulation experiment
-For English anotation please refer to file FuncConnAna_sudoData_FigS10.m
+Each subfolder is named using the format `AnalysisName_FigNo`. We provide two versions of all code: one in English and one in Chinese.
 
-Folder FigS7_USNQuanlityCheck contains data and code required to regenerate FigS7
+- The folder `FigS10_SyncAnaCheck` contains code for regenerating **Figure S10: Assessment of synchronization normalization method by simulation experiment**.  
+  For English annotations, please refer to the file `FuncConnAna_sudoData_FigS10.m`.
 
+- The folder `FigS7_USNQualityCheck` contains data and code required to regenerate **Figure S7**.
+
+The scripts `GetIntensity` and `GetSpike` were used to extract intensity and spike values from `.mat` files and save them in `.xlsx` format, which is the required input format for some of the analysis scripts.
