@@ -1,86 +1,18 @@
 # Analysis Scripts Overview
 
-This repository contains scripts used in the study to process calcium imaging data, perform statistical and information-theoretic analyses, analyze behavioral data, and support figure reproduction.  
+This repository contains scripts used in the study [Unsilenced inhibitory cortical ensemble gates remote memory retrieval](https://www.biorxiv.org/content/10.1101/2024.07.01.601454v2) to process calcium imaging data, perform statistical and information-theoretic analyses, analyze behavioral data, and support figure reproduction.  
+
 All sections include brief descriptions of functionality, dependencies, and references to relevant figures in *Wang et al.* (2025).
 
----
+All questions may be directed to Shaoli Wang (shaoliwang@fudan.edu.cn) or He Yang (21111520061@m.fudan.edu.cn).
 
-## 1. Calcium Data Processing
+We utilized existing repositories in various parts of the code, including:
 
-### Deconvolution
-Deconvolution is performed using the `constrained_foopsi` module from [CaImAn].  
-To run the script `deconv_multi`:
+1. [CaImAn](https://github.com/flatironinstitute/CaImAn)
+2. [Neuroscience Information Theory Toolbox](https://github.com/nmtimme/Neuroscience-Information-Theory-Toolbox)
+3. [DeepSpike](https://github.com/mackelab/DeepSpike)
 
-1. Install CaImAn in your Anaconda environment:
-   ```bash
-   conda create -n caimans python=3.8
-   conda activate caimans
-   pip install caiman
-
-2. Place the script in your `caimans` environment directory.
-3. Provide a folder containing all `.xlsx` files processed in earlier steps.
-4. The script will output a MATLAB `.mat` file containing discrete spike probability distributions.
-
----
-
-## 2. FindUSN
-
-The script `Find_key_node` processes outputs from `CoactivityGraph` to identify neurons that exhibit persistently higher activity during the remote memory stage compared to pre-training levels.
-For methodological details, see the STAR Methods in *Wang et al.* (2025).
-
-The script `KeyNode_CoactivityGraph` analyzes activity patterns of unsilenced cells and generates network topology structures.
-Results are reported in **Figure 5C**.
-
----
-
-## 3. Information Theory Analyses
-
-The following analyses are implemented in the script `CalcInformationTheoryAnalyses.mlx`:
-
-* Ensemble activity cosine similarity calculation
-* Joint entropy calculation
-* Mutual information calculation
-* Mahalanobis distance calculation and clustering analyses
-* Community analyses (performed in Gephi; code not included)
-
-**Requirements**
-To run the scripts, the [`Neuroscience-Information-Theory-Toolbox`](https://github.com/nmtimme/Neuroscience-Information-Theory-Toolbox) must be added to the MATLAB path.
-
----
-
-## 4. Behavioral Data Processing
-
-**Synchronization Counts Calculation**
-The ensemble synchronization counts analyses are reported in **Figures 3**, **4G**, and **6L**.
-
-* `CoactivityMap_2d`
-  Accepts `.xlsx` files and ROI `Location` files from a given time point, producing neuronal synchronization counts (saved as `Line_cell_sum`). Results correspond to **Figures 3A–B**.
-
-* `CoactivityMap_3d`
-  Processes results from 3D imaging using a similar logic to `CoactivityMap_2d`.
-
----
-
-## 5. Supporting Programs
-
-This folder contains additional scripts used to regenerate supplementary figures and conduct various statistical tests.
-
-**Folder Structure**
-
-* Each folder is named in the format `AnalysisName_FigNo`.
-* Two versions of each script are provided: English and Chinese.
-
-**Examples**
-
-* **FigS10\_SyncAnaCheck**
-  Contains code for simulating and assessing synchronization normalization methods (see `FuncConnAna_sudoData_FigS10.m` for English annotations).
-* **FigS7\_USNQualityCheck**
-  Contains data and scripts to regenerate Figure S7.
-
-**Utility Scripts**
-
-* `GetIntensity` and `GetSpike`
-  Extract intensity and spike values from `.mat` files and save them to `.xlsx` format for use in other analyses.
+Most MATLAB codes are provided in *.mlx* format. For original code annotated in Chinese, we also offer an English version in *.m* format under the same file name.
 
 ---
 
