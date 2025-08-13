@@ -1,6 +1,6 @@
-# Analysis Scripts Overview
+# Analysis Scripts Overview [![DOI](https://zenodo.org/badge/1036644381.svg)](https://doi.org/10.5281/zenodo.16830879)
 
-This repository contains scripts used in the study [Unsilenced inhibitory cortical ensemble gates remote memory retrieval](https://www.biorxiv.org/content/10.1101/2024.07.01.601454v2)[![DOI](https://zenodo.org/badge/1036644381.svg)](https://doi.org/10.5281/zenodo.16830879) to process calcium imaging data, perform statistical and information-theoretic analyses, analyze behavioral data, and support figure reproduction.  
+This repository contains scripts used in the study [Unsilenced inhibitory cortical ensemble gates remote memory retrieval](https://www.biorxiv.org/content/10.1101/2024.07.01.601454v2) to process calcium imaging data, perform statistical and information-theoretic analyses, analyze behavioral data, and support figure reproduction.  
 
 All sections include brief descriptions of functionality, dependencies, and references to relevant figures in *Wang et al.* (2025).
 
